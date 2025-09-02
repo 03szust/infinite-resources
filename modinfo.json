@@ -1,0 +1,25 @@
+{
+  "ModID": "infinite-resources",
+  "Version": "1.1",
+  "Anno": 8,  
+  "Difficulty": "cheat",
+  "RequiresNewGame": false,
+  "SafeToRemove": true,
+  "Category": {
+    "English": "Cheat"
+  },
+  "ModName": {
+    "English": "Infinite Resources"
+  },
+  "Description": {
+    "English": "Keep all your resources at ten below capacity"
+  },
+  "Scripts": {
+    "Modules": [
+      "ubi/infinite-resources.lua"
+    ],
+    "Init": "InfiniteResources = require(\"infinite-resources\")",
+    "Tick": "InfiniteResources:Tick()",
+    "Load": "InfiniteResources:Load()"
+  }
+}
