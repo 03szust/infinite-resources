@@ -16,7 +16,7 @@
   },
   "Scripts": {
     "Modules": [
-      "ubi/infinite-resources.lua"
+      "infinite-resources_lua/infinite-resources.lua"
     ],
     "Init": "InfiniteResources = require(\"infinite-resources\")",
     "Tick": "InfiniteResources:Tick()",
