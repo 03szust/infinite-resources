@@ -14,6 +14,7 @@ local previousAreaID = nil
 function InfiniteResources.Load()
     economyList = {}
     areaList = {}
+    previousAreaID = nil
 end
 
 -- Function to add Areas to the Lists
