@@ -16,9 +16,9 @@
   },
   "Scripts": {
     "Modules": [
-      "infinite-resources_lua/infinite-resources.lua"
+      "infinite-resources_03_szust/infinite-resources_03_szust.lua"
     ],
-    "Init": "InfiniteResources = require(\"infinite-resources\")",
+    "Init": "InfiniteResources = require(\"infinite-resources_03_szust\")",
     "Tick": "InfiniteResources:Tick()",
     "Load": "InfiniteResources:Load()"
   }
