@@ -1,6 +1,6 @@
 {
   "ModID": "infinite-resources",
-  "Version": "1.1",
+  "Version": "1.2",
   "Anno": 8,  
   "Difficulty": "cheat",
   "RequiresNewGame": false,
@@ -12,7 +12,7 @@
     "English": "Infinite Resources"
   },
   "Description": {
-    "English": "Keep all your resources at ten below capacity"
+    "English": "Keep all your resources at 20 percent below capacity"
   },
   "Scripts": {
     "Modules": [
