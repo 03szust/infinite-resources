@@ -9,6 +9,11 @@ local areaList = {}
 -- Helper Variable to store the previous Area ID to stop the code from executing too much things
 local previousAreaID = nil
 
+-- Variables for difference and percentage for amount of resources
+local difference = 20
+local percentage = 0.8
+local usePercentage = true
+
 -- Function executed at Load
 -- Empties both Lists so they can be repopulated
 function InfiniteResources.Load()
@@ -68,7 +73,11 @@ function InfiniteResources.Tick()
         else
             local capacity = ecoid:GetStorageCapacity(2174)   
             ecoid:AddAmount(0 - capacity)
-            ecoid:AddAmount(capacity - 10)
+            if usePercentage then
+                difference = math.floor(capacity * percentage)
+            else
+                ecoid:AddAmount(capacity - difference)
+            end
         end
     end
     
