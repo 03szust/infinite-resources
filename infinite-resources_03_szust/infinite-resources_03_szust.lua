@@ -11,7 +11,7 @@ local previousAreaID = nil
 
 -- Variables for difference and percentage for amount of resources
 local difference = 20
-local percentage = 0.8
+local percentage = 0.2
 local usePercentage = true
 
 -- Function executed at Load
@@ -42,9 +42,9 @@ function addArea(area)
 end
 
 -- Function executed at Tick
--- Locks Resources at 10 under Capacity
+-- Locks Resources at either difference or percentage under Capacity
 -- For all Areas that have been looked at and belong to the Player
--- Since the last Load
+-- since the last Load
 function InfiniteResources.Tick()
     
     -- get Area the Camera is currently on
@@ -75,9 +75,9 @@ function InfiniteResources.Tick()
             ecoid:AddAmount(0 - capacity)
             if usePercentage then
                 difference = math.floor(capacity * percentage)
-            else
-                ecoid:AddAmount(capacity - difference)
             end
+            ecoid:AddAmount(capacity - difference)
+            
         end
     end
     
